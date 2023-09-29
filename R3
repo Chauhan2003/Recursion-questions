@@ -1,0 +1,20 @@
+// Create a recursive function to compute the sum of an array of integers.
+
+// [1,2,3,4,5]
+
+class Main{
+    public static void main(String[] args){
+        int[] arr = {1,2,3,4,5,6};
+        int len = arr.length;
+        
+        int res = sumArray(arr, len-1);
+        System.out.print(res);
+    }
+    
+    public static int sumArray(int[] arr, int n){
+        if(n<0){
+            return 0;
+        }
+        return arr[n] + sumArray(arr, n-1);
+    }
+}
