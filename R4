@@ -1,0 +1,15 @@
+class Main {
+    public static void main(String[] args) {
+        int result = function(239);
+        System.out.println(result);
+    }
+
+    public static int function(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        int num = n % 10;
+        int sum = num + function(n / 10);
+        return sum;
+    }
+}
