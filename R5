@@ -1,0 +1,20 @@
+// Power Function: Create a recursive function to calculate the power of a number (x^y).
+
+class Main{
+    public static void main(String[] args){
+        int n = 5;
+        int r = 2;
+        
+        int res = powerNumber(n, r);
+        System.out.print(res);
+    }
+    
+    public static int powerNumber(int num, int r){
+        if(r == 0){
+            return 1;
+        }
+        else{
+            return num * powerNumber(num, r-1);
+        }
+    }
+}
